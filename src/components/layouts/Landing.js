@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Landing = props => {
     return (
@@ -11,7 +12,7 @@ const Landing = props => {
                     Pesquise a ficha de politicos em todos os âmbitos e setores.
                 </p>
                 <div className="buttons">
-                    <a href="register.html" className="btn btn-primary">Pesquisar</a>
+                    <Link to="/politicos" className="btn btn-primary">Pesquisar</Link>
                 </div>
                 </div>
             </div>
