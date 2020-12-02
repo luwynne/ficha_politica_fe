@@ -4,7 +4,7 @@ import { setAlert } from './alert';
 
 
 export const searchPoliticos = param => async dispatch => {
-    //try{
+    try{
 
         dispatch({
             type:SEARCHING_POLITICOS,
@@ -18,10 +18,10 @@ export const searchPoliticos = param => async dispatch => {
             payload: res.data
         })
 
-    /*}catch(err){
+    }catch(err){
         dispatch({
             type: POLITICOS_ERROR,
             payload:{ msg: err.response.statusText, status: err.response.status }
         });
-    }*/
+    }
 }
