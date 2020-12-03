@@ -1,4 +1,4 @@
-import { SEARCHING_POLITICOS, SEARCH_POLITICOS, POLITICOS_ERROR, CLEAR_POLITICOS } from '../actions/types';
+import { SEARCHING_POLITICOS, SEARCH_POLITICOS, GET_POLITICO, POLITICOS_ERROR, POLITICO_ERROR, CLEAR_POLITICOS } from '../actions/types';
 
 const initial_state = {
     politico:null,
@@ -26,11 +26,19 @@ export default function(state = initial_state, action){
                 loading:false
             }
 
+        case GET_POLITICO:
+            return{
+                ...state,
+                politico: payload,
+                loading: false
+            }    
+
         case POLITICOS_ERROR:
+        case POLITICO_ERROR:    
             return{
                 ...state,
                 loading:false,
-                error:payload
+                error:payload,
             }
             
         case CLEAR_POLITICOS:

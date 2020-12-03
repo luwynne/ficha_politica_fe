@@ -492,6 +492,10 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.small-break{
+  display: block;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {

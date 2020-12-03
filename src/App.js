@@ -18,6 +18,7 @@ import Processos from './components/processos/Processos';
 import Alert from './components/layouts/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
+import PoliticoProfile from './components/politicos/PoliticoProfile';
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
               <Switch>
                   <Route exact path="/login" component={Login}/>
                   <Route exact path="/politicos" component={Politicos}/>
+                  <Route exact path="/politico/:id" component={PoliticoProfile}/>
                   <Route exact path="/projetos" component={Projetos}/>
                   <Route exact path="/processos" component={Processos}/>
                   <PrivateRoute exact path="/dashboard" component={Dashboard}/>
