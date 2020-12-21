@@ -364,6 +364,10 @@ button {
   margin-bottom: 1rem;
 }
 
+.profile-block {
+  display: block;
+}
+
 /* Profile Page */
 .profile-grid {
   display: grid;

@@ -14,6 +14,7 @@ import Navbar from './components/layouts/Navbar';
 import Login from './components/auth/Login';
 import Politicos from './components/politicos/Politicos';
 import Projetos from './components/projetos/Projetos';
+import Projeto from './components/projetos/Projeto';
 import Processos from './components/processos/Processos';
 import Alert from './components/layouts/Alert';
 import Dashboard from './components/dashboard/Dashboard';
@@ -40,6 +41,7 @@ const App = () => {
                   <Route exact path="/politicos" component={Politicos}/>
                   <Route exact path="/politico/:id" component={PoliticoProfile}/>
                   <Route exact path="/projetos" component={Projetos}/>
+                  <Route exact path="/projeto/:id" component={Projeto}/>
                   <Route exact path="/processos" component={Processos}/>
                   <PrivateRoute exact path="/dashboard" component={Dashboard}/>
               </Switch>
