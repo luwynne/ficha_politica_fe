@@ -34,13 +34,13 @@ const Projeto = ({ getProjectById, auth,
                         <p><strong>Protocolo: </strong>{projeto.protocolo}</p>
                         <p><strong>Tipo: </strong>{projeto.tipo.nome}</p>
                         <p><strong>Data: </strong><Moment format='YYYY/MM/DD'>{projeto.created_at}</Moment></p>
-                        <br />
+                        <br/>
                         <p><strong>Descricao: </strong><br />{projeto.descricao}</p>
-                        <br />
+                        <br/>
                         <p><strong>Status: </strong>{ projeto.aprovado === null ? 'Pendente' : 'Finalizado' }</p>
                         <p><strong>Aprovado: </strong>{ projeto.aprovado === null ? 'Projeto em votação' : (projeto.aprovado ? 'Sim' : 'Não') }</p>
                         <p><strong>Total de votos: </strong>{projeto.total_votos}</p>
-                        <p><strong>Relator: </strong>{projeto.relator.nome}</p>
+                        <p><strong>Relator: </strong><Link to={`/politico/${projeto.relator.politico_id}`}>{projeto.relator.nome}</Link></p>
                     </Fragment>
 
 

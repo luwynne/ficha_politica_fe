@@ -36,8 +36,9 @@ const PoliticoProfile = ({
                             <PoliticoTop politico={politico} />
 
                             <PoliticoAbout politico={politico} />
-
+                            
                             {
+                               
                                 politico.mandatos.length > 0 
                                 ? ( politico.mandatos.map(mandato => (
                                     mandato.projetos !== null && mandato.projetos.length > 0 ? (
@@ -50,15 +51,15 @@ const PoliticoProfile = ({
                                             } 
                                         </div>
                                         
-                                    )
-                                    : 
-                                    (<div className="profile-exp bg-white p-2">
-                                        <h4>Nao foram encontrados projetos</h4>
-                                    </div>) 
-                                ) ) )
+                                        )
+                                        : 
+                                        (<div className="profile-exp bg-white p-2">
+                                            <h4>Nao foram encontrados projetos nesse</h4>
+                                        </div>) 
+                                    ) ) )
                                 : (<div className="profile-exp bg-white p-2">
                                         <h4>Nao foram encontrados projetos</h4>
-                                    </div>)    
+                                   </div>)    
                             }
 
                         </div>
